@@ -5,8 +5,8 @@ This repository containes the learnings about memory and addresses using the C p
 ## Index
 - <a href="#hex">Hexadecimal Conversion</a>
 - <a href="#mem">Memory cell</a>
-- <a href="">Resident Memory</a>
-- <a href="">Segmentation of memory</a>
+- <a href="#res">Resident Memory</a>
+- <a href="#seg">Segmentation of memory</a>
 - <a href="">Data types in C</a>
 - <a href="">Pointers</a>
 
@@ -38,9 +38,7 @@ This repository containes the learnings about memory and addresses using the C p
 
 
 ## <h2 id="mem">Memory cell</h2>
-Entire RAM has divided in numbers of equal parts, which are  
-known as memory cells. Following diagram represents the 256  
-MB RAM.<br><br>
+Entire RAM has been divided in numbers of equal parts, which are known as memory cells. Following diagram represents the 256 MB of RAM.<br><br>
 <img width="639" height="518" alt="image" src="https://github.com/user-attachments/assets/1002dda8-6d40-4eab-8663-163702b5c539" />
 
 <br><br>
@@ -50,16 +48,16 @@ That is a `character` data reserves `one byte` and `integer` data reservers `two
 
 Address is always in whole number and must be in increasing order.
 
-Just for now assume:-
+For now let's assume:-
 ```bash
 int a = 4;
 ```
 <img width="697" height="157" alt="image" src="https://github.com/user-attachments/assets/04649d15-7a9c-4e3c-a52b-adbbf4c1fb9b" />
-
-If 0x5000 is the address of the memory cell where value 4 is stored. Address of next memory cell will be 0x5001 and so on in increasing order.
+<br>
+If 0x5000 is the address of the memory cell where value 4 is stored. Address of next memory cell will be 0x5001 and so on in increasing order. Addresses are in a continuous order
 <br><br>
 
-## <h2 id="hex">Resident Memory</h2>
+## <h2 id="res">Resident Memory</h2>
 Ram is diivided into two parts: 
 - Resident memory 
 - Extended memory (useless for now)
@@ -77,7 +75,7 @@ All the c variables are stored in the residence memory. In turbo C 3.0, 20 bits 
 <img width="649" height="547" alt="image" src="https://github.com/user-attachments/assets/d5f76584-9e9d-4a65-9d46-db4fc1d77264" />
 
 <br><br>
-A C programmer cannot not decides what will be the memory address of any variables. It is decided by compiler. 
+A C programmer cannot not decides what will be the memory address of any variables he defines. It is decided by compiler. 
 
 For Example: -
 
@@ -96,11 +94,11 @@ return 0;
 
 <b>Output:</b> We cannot predict.
 
-It may be 0x12345 or 0x54321 or any other address within 0x00000 to 0xFFFFF. 
+It may be 0x12345 or 0x54321 or any other address within the range of 0x00000 to 0xFFFFF. 
 
 But we can say in 16 bits compilers address must be within 0x0000 to 0xFFFF and in 32 bits compilers memory address must be within 0x00000000 to 0xFFFFFFFF.
 
-<b>Note:</b> <i>Suppose your c compiler is based on the microprocessor which total address buses are 32 then its total size of addressable memory will be:</i>
+<b>Note:</b> <i>Suppose your c compiler is based on the microprocessor where total address buses are 32 then its total size of addressable memory will be:</i>
 <div align="center">
 
 `Addressable Memory = 2 ^ (Number of Address Bus)`
@@ -109,7 +107,7 @@ But we can say in 16 bits compilers address must be within 0x0000 to 0xFFFF and 
 = 2^32 bytes<br>
 = 4GB
 
-## <h2 id="hex">Segmentation of memory</h2>
+## <h2 id="seg">Segmentation of memory</h2>
 
 Residential memory of RAM of size 1MB has divided into 16 equal parts. These parts is called segment.
 
@@ -121,7 +119,7 @@ Each segment has size is 64 KB.
 <img width="546" height="301" alt="image" src="https://github.com/user-attachments/assets/d7d2f850-8d8b-459e-9ced-abb2cdc3d046" />
 
 
-This process of dividing memory into segments is called segmentation of memory.
+This process of dividing memory into segments is called "segmentation of memory".
 
 <b>NOTE:</b>Physical addresses of any variables are stored in the 20 bits. But we have not any pointers of 
 size 20 bits. <br>
