@@ -6,9 +6,12 @@ This repository containes the learnings about memory and addresses using the C p
 - <a href="#hex">Hexadecimal Conversion</a>
 - <a href="#mem">Memory cell</a>
 - <a href="#res">Resident Memory</a>
+- <a href="#phy">Physical Address of Computer</a>
 - <a href="#seg">Segmentation of memory</a>
-- <a href="">Data types in C</a>
-- <a href="">Pointers</a>
+- <a href="#off">Offset Address</a>
+- <a href="#data">Data Segments</a>
+- <a href="dt">Data types in C</a>
+- <a href="point">Pointers</a>
 
 ## <h2 id="hex">Hexadecimal Conversion</h2>
 | Hexadecimal | Decimal | Binary  |
@@ -69,7 +72,7 @@ Resident memory is the portion of a computer's memory that is currently being us
 
 When any program is executed it is stored in the residence memory. For turbo c 3.0, it has 1MB residence memory i.e. when we open turbo c 3.0 it stores 1MB in the RAM. 
 
-## Physical address of computer  
+## <h2 id="phy">Physical address of computer</h2>  
 All the c variables are stored in the residence memory. In turbo C 3.0, 20 bits address of the memory cell is known as physical address or real address. In 20 bits, we can represent address from 0x00000 to 0xFFFFF. That is all c variables must have memory address within this range.
 
 <img width="649" height="547" alt="image" src="https://github.com/user-attachments/assets/d5f76584-9e9d-4a65-9d46-db4fc1d77264" />
@@ -129,7 +132,7 @@ So pointers cannot access whole residence memory address.To solve this problem w
    2. Far pointer 
    3. Huge pointer
 
-## Offset address meaning 
+## <h2 id="off">Offset address meaning</h2> 
 Each segment has divided into 2 parts. They are:-
 - Segment number (4 bit)
 - Offset address (16 bit)
@@ -156,7 +159,7 @@ return 0;
 }
 ```
 
-## Data segments in c language (64 KB each)
+## <h2 id="data">Data segments in c language (64 KB each)</h2>
 <img width="572" height="501" alt="image" src="https://github.com/user-attachments/assets/21ccd119-3c19-44ce-899b-8830cbed76cd" />
 
 
@@ -266,5 +269,5 @@ This memory area is used for dynamic memory allocation. All the memory allocated
 ### 4. <u>Code area</u>
 This memory area is used to store the executable code of the program. It is also permanent memory space and variable will store in the memory unless and until prgogram ends. <i>It's size is fixed for the fixed size of residence memory. (1MB in this case)</i>
 
-## <h2 id="hex">Data types in C</h2>
+## <h2 id="dt">Data types in C</h2>
 <img width="688" height="251" alt="image" src="https://github.com/user-attachments/assets/bb98f3af-c07e-4b2e-9d16-9309e10af1f5" />
