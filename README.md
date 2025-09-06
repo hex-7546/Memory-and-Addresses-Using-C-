@@ -10,8 +10,8 @@ This repository containes the learnings about memory and addresses using the C p
 - <a href="#seg">Segmentation of memory</a>
 - <a href="#off">Offset Address</a>
 - <a href="#data">Data Segments</a>
-- <a href="dt">Data types in C</a>
-- <a href="point">Pointers</a>
+- <a href="#dt">Data types in C</a>
+- <a href="#point">Pointers</a>
 
 ## <h2 id="hex">Hexadecimal Conversion</h2>
 | Hexadecimal | Decimal | Binary  |
@@ -271,3 +271,11 @@ This memory area is used to store the executable code of the program. It is also
 
 ## <h2 id="dt">Data types in C</h2>
 <img width="688" height="251" alt="image" src="https://github.com/user-attachments/assets/bb98f3af-c07e-4b2e-9d16-9309e10af1f5" />
+
+### Range of Data Types
+<img width="675" height="360" alt="image" src="https://github.com/user-attachments/assets/282683b2-c98f-46c2-b031-21ea8c05e18a" />
+<br><br>
+
+## <h2 id="point>Pointers in C</h2>
+Pointer is a type of variable which stores memory addresses of another variable. They allow quick and efficient access and manipulation of data. <br>
+<img width="668" height="500" alt="image" src="https://github.com/user-attachments/assets/e9dddfb3-9efe-4f6a-bb18-3abed22df327" />
