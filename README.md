@@ -277,5 +277,6 @@ This memory area is used to store the executable code of the program. It is also
 <br><br>
 
 ## <h2 id="point">Pointers in C</h2>
-Pointer is a type of variable which stores memory addresses of another variable. They allow quick and efficient access and manipulation of data. <br>
+Pointer is a type of variable which stores memory addresses of another variable. They allow quick and efficient access and manipulation of data. 
+<br>
 <img width="668" height="500" alt="image" src="https://github.com/user-attachments/assets/e9dddfb3-9efe-4f6a-bb18-3abed22df327" />
